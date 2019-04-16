@@ -7,6 +7,11 @@ public class CashRegister {
     }
 
     void process(Purchase purchase) {
-        printer.print(purchase.getDescription());
+        final int discount = calculateDiscount(purchase);
+        printer.print(purchase.getDescription() + "\nDiscount is:" + discount);
+    }
+
+    int calculateDiscount(Purchase purchase) {
+        throw new UnsupportedOperationException("Not implemented!");
     }
 }
