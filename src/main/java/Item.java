@@ -4,6 +4,11 @@ public class Item {
 
     Double price;
 
+    public Item(String itemName, Double price) {
+        this.itemName = itemName;
+        this.price = price;
+    }
+
     public String getItemName() {
         return itemName;
     }
