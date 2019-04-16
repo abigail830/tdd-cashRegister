@@ -1,12 +1,13 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Arrays;
 
 import static org.mockito.Mockito.*;
-import static org.mockito.MockitoAnnotations.initMocks;
 
+@ExtendWith(MockitoExtension.class)
 class CashRegisterTest {
 
     @Mock
@@ -14,10 +15,10 @@ class CashRegisterTest {
     @Mock
     Printer globalMockPrinter;
 
-    @BeforeEach
-    void setUp() {
-        initMocks(this);
-    }
+//    @BeforeEach
+//    void setUp() {
+//        initMocks(this);
+//    }
 
     @Test
     void should_able_to_invoke_printer_with_right_content_with_manual_mockprinter() {
